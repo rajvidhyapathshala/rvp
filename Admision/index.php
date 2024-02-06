@@ -41,7 +41,7 @@
                 <h2>SCHOOL ADMISSION FORM</h2>
                 <hr>
                 <div class="form-wrapper">
-                    <form action="manage.php">  
+                    <form action="https://formsubmit.co/fd1b94ac9b7a7c040b0e84326afe3c08">  
                         <h3>Student Information</h3>                  
                         <div class="form-item">
                             <label for="fullname">Student Name :</label>
