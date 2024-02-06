@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Rajvidhya Pathshala" itemprop="name" content="Default title">
+    <meta property="og:site_name" content="Default title">
+    <meta property="og:description" name="twitter:description" itemprop="description" content="Rajvidhya Pathshala is a place of learning and growth . It is situated in Ghorahi-18, Nawalpur Dang, and Boasts a large and Beautiful Building. ">
+    <meta property="og:type" content="website">
+    <meta property="og:image" name="twitter:image:src" itemprop="image" content="">
+    <meta property="og:image" content="tamplate.jpg">
+    <meta property="og:image:secure_url" content="tamplate.jpg">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+    <meta property="og:url" content="https://rvp.edu.np/">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="og:image:alt" name="twitter:image:alt" content="LOGO">
+
+
+
+    <link rel="icon" href="tra.png">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Rajvidhya Pathshala</title>
+    </head>
+    <body>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script>
+      let timerInterval;
+Swal.fire({
+  icon: "success",
+  title: "Successful ",
+  html: "<b></b>",
+  timer: 2000,
+  timerProgressBar: true,
+  didOpen: () => {
+    Swal.showLoading();
+    const timer = Swal.getPopup().querySelector("b");
+    timerInterval = setInterval(() => {
+      timer.textContent = `${Swal.getTimerLeft()}`;
+    }, 100);
+  },
+  willClose: () => {
+    clearInterval(timerInterval);
+  }
+}).then((result) => {
+  /* Read more about handling dismissals below */
+  if (result.dismiss === Swal.DismissReason.timer) {
+    console.log("I was closed by the timer");
+  }
+});
+     </script>
+
+     <div class="container">
+      <img style="height: 130px; " src="tra.png" alt="" class="">
+      <P style="font-style: italic; font-family: 'Times New Roman', Times, serif;">"Reach the Pinnacle With Glory"</P>
+      <h1>RAJVIDHYA PATHSHALA</h1>
+      <h2>Thank You </h2>
+      <h2>Your Submit file Successful</h2>
+      <h2>Visit once or contact us</h2>
+
+
+      <hr>
+      <a href="../index.html"><button class="register">Back to home</button></a></center><br>
+
+
+      <div class="form-wrapper">
+ 
+</body>
+</html>
