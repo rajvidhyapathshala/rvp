@@ -255,12 +255,12 @@ header
 }
 
 .background-header .main-nav .nav li a {
-  color: #1e1e1e!important;
+  color: #000000!important;
 }
 
 .background-header .logo,
 .background-header .main-nav .nav li a {
-  color: #1e1e1e!important;
+  color: #000000!important;
 }
 
 .background-header .main-nav .nav li:hover a {
@@ -272,7 +272,8 @@ header
 }
 
 .header-area {
-  background-color: rgba(250,250,250,0.15);
+  box-shadow: 0 0.1rem 1rem rgb(0, 0, 0);
+  backdrop-filter: blur(.8rem);
   position: absolute;
   top: 40px;
   left: 0;
@@ -355,12 +356,12 @@ header
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #f5a425!important;
+  color: #f52525!important;
 }
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: rgb(255, 157, 0)!important;
+  color: rgb(255, 0, 0)!important;
   opacity: 1;
 }
 
@@ -405,7 +406,6 @@ header
 .header-area .main-nav .nav li.has-sub ul.sub-menu li a {
   opacity: 1;
   display: block;
-  background: #f7f7f7;
   color: #2a2a2a!important;
   padding-left: 20px;
   height: 40px;
@@ -421,9 +421,11 @@ header
 }
 
 .header-area .main-nav .nav li.has-sub ul li a:hover {
-  background: #fff;
   color: #f52525!important;
   padding-left: 25px;
+  box-shadow: 0 0.1rem 1rem rgb(0, 0, 0);
+  background:linear-gradient(180deg,rgba(255, 0, 0, 0.524),rgba(0, 0, 0, 0.26));
+  backdrop-filter: blur(.8rem);
 }
 
 .header-area .main-nav .nav li.has-sub ul li a:hover:before {
