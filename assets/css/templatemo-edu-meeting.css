@@ -421,11 +421,9 @@ header
 }
 
 .header-area .main-nav .nav li.has-sub ul li a:hover {
-  color: #f52525!important;
+  color: white;
   padding-left: 25px;
-  box-shadow: 0 0.1rem 1rem rgb(0, 0, 0);
-  background:linear-gradient(180deg,rgba(255, 0, 0, 0.524),rgba(0, 0, 0, 0.26));
-  backdrop-filter: blur(.8rem);
+  
 }
 
 .header-area .main-nav .nav li.has-sub ul li a:hover:before {
