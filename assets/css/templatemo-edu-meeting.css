@@ -719,7 +719,7 @@ banner
     width: 100%;
 }
 .popup {
- display: none;
+
   position: fixed;
   top: 0;
   width: 100vw;
