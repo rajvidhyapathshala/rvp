@@ -1166,11 +1166,21 @@ section.apply-now {
 
 }
 section.apply-now .item {
-  background-color: rgba(255, 0, 0, 0.402);
+  backdrop-filter:blur(0.4rem);
+  box-shadow: 0 0.1rem 1rem rgb(0, 0, 0);
   padding: 40px;
   margin-bottom: 30px;
   border-radius: 10px;
-
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+  border: 1px solid rgba(255, 255, 255, 0.276);
+  background-image: linear-gradient( rgb(0, 0, 0), rgb(6, 113, 99));
+}
+section.apply-now .item img{
+  height: 100px;
+  width: 100px;
+  align-items: center;
+  box-shadow: 0 0 .9em rgba(255, 255, 255, 0.5);
+  border-radius: 50px 50px;
 }
 
 section.apply-now .item h3 {
@@ -1187,14 +1197,13 @@ section.apply-now .item p {
 }
 
 .accordions {
-  
   border-radius: 20px;
   padding: 80px;
-  background: linear-gradient(0deg,rgba(51, 228, 255, 0.56)50%, transparent);
   margin-left: 45px;
+  height: 100px;
 }
 .accordions .accordion {
-  border-bottom: 1px solid #eee;
+
 }
 .accordions .last-accordion {
   border-bottom: none;
@@ -1207,6 +1216,96 @@ section.apply-now .item p {
 .accordions .accordion .content a:hover{
   color: red;
 }
+.accordions .accordion .content  .wrapper .outer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.accordions .accordion .content .wrapper .card{
+  backdrop-filter:blur(0.4rem);
+  width: 430px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.261);
+  pointer-events: none;
+  position: absolute;
+  justify-content: space-between;
+  border-radius: 100px 20px 20px 100px;
+  box-shadow: 0px 10px 15px rgba(3, 9, 17, 0.715);
+  animation: card 15s linear infinite;
+  animation-delay: calc(3s * var(--delay));
+}
+.accordions .accordion .content .outer:hover .card{
+  animation-play-state: paused;
+}
+.accordions .accordion .content .outer{
+}
+.accordions .accordion .content .wrapper .card:last-child{
+  animation-delay: calc(-3s * var(--delay));
+}
+@keyframes card{
+  0%{
+      opacity: 0;
+      transform: translateY(100%) scale(0.5);
+  }5%, 20%{
+      opacity: 0.4;
+      transform: translateY(100%) scale(0.7);
+  }25%, 40%{
+      opacity: 1;
+      transform: translateY(0%) scale(1);
+      pointer-events: auto;
+  }45%, 60%{
+      opacity: 0.4;
+      transform: translateY(-100%) scale(0.7);
+  }65%, 100%{
+      opacity: 0;
+      transform: translatey(-100%) scale(0.5s);
+  }
+}
+
+.accordions .accordion .content .wrapper  .card .content{
+  display: flex;
+  align-items: center;
+}
+.accordions .accordion .content .wrapper  .card .img{
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    left: -5px;
+    background: rgba(255, 255, 255, 0.771);
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+}
+.accordions .accordion .content .wrapper .card .img img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.accordions .accordion .content .wrapper .card .details{
+  margin-left: 80px;
+}
+.accordions .accordion .content .wrapper .details span{
+  font-weight: 600;
+  font-size: 18px;
+}
+.accordions .accordion .content .wrapper .card a{
+  text-decoration: none;
+  padding: 7px 18px;
+  border-radius: 25px;
+  color: #000000;
+  transition: all 0.3s ease;
+}
+.accordions .accordion .content .wrapper .card p{
+  font-size: 20px;
+}
+.accordions .accordion .content .wrapper .card a:hover{
+  transition: scale(0.94);    
+  }
+
 .accordion-head {
   padding: 20px;  
   font-size: 18px;
@@ -1214,7 +1313,7 @@ section.apply-now .item p {
   color: #ffffff;
   cursor: pointer;
   transition: color 200ms ease-in-out;
-  border-bottom: 1px solid #fff;
+
 }
 @media screen and (min-width: 768px) {
   .accordion-head {
@@ -1237,7 +1336,6 @@ section.apply-now .item p {
   overflow: hidden;
   height: 0px;
   transition: height 100ms ease-in-out;
-  border-bottom: 1px solid #fff;
 }
 .accordion-body .content p{
   padding: 20px;
